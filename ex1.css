@@ -1,51 +1,64 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3A7CA5; 
+    color: white; 
 }
 
-nav{
-    background-color: #205781;
+header {
+    position: sticky;
+    top: 0;
+    background-color: #1C4E6E;
+    z-index: 100;
+}
+
+nav {
     text-align: center;
 }
 
-.menu{
-    list-style-type: none;  
+.menu {
+    list-style-type: none;
     padding: 0;
     margin: 0;
     display: inline-flex;
+    background-color: #1C4E6E; 
 }
 
-.menu li{
+.menu li {
     position: relative;
 }
 
-.menu li a{
+.menu li a {
     display: block;
     padding: 15px 20px;
     color: white;
     text-decoration: none;
 }
 
-.menu li a:hover{
-    background-color: #4F959D;
+.menu li a:hover {
+    background-color: #56A1A5;
 }
 
-.submenu{
+.submenu {
     display: none;
     position: absolute;
-    background-color: #98D2C0;
+    background-color: #B8D8D4; 
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.menu li:hover .submenu{
-    display: block ;
+.menu li:hover .submenu {
+    display: block;
 }
 
-/*.submenu li a{
+.submenu li a {
     padding: 10px 15px;
-}*/
+    color: #333;
+    text-decoration: none;
+}
 
-.submenu li a:hover{
-    background-color: #addbcd;
+.submenu li a:hover {
+    background-color: #7DBE9C; 
 }
