@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Loja</title>
-    <link rel="stylesheet" href="roupa.css">
+    <link rel="stylesheet" href="home.css">
     <style>
-       
         ul li ul {
             display: none;
         }
@@ -15,64 +14,63 @@
         li:hover > ul {
             display: block;
         }
-        
     </style>
 </head>
 
 <body>
-
     <header>
+        <h1>Minha Loja</h1>
         <nav>
             <ul class="menu">
-                <li><a href="home.html" onclick>Home</a>
-                </li>
-                <li><a href="roupa.html" onclick="changeContent('Roupa')">Roupa</a>
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="roupa.html">Roupa</a>
                     <ul class="submenu">
-                        <li><a href="#" onclick="changeContent('Tipos de vestidos')">tipos de vestidos</a></li>
-                        <li><a href="#" onclick="changeContent('Tipos de blusas')">tipos de blusas</a></li>
-                        <li><a href="#" onclick="changeContent('Tipos de calças')">tipos de calças</a></li>
-                        <li><a href="#" onclick="changeContent('Tipos de saias')">tipos de saias</a></li>
-                        <li><a href="#" onclick="changeContent('Tipos de shorts')">tipos de shorts</a></li>
+                        <li><a href="#">Vestidos</a></li>
+                        <li><a href="#">Blusas</a></li>
+                        <li><a href="#">Calças</a></li>
+                        <li><a href="#">Saias</a></li>
+                        <li><a href="#">Shorts</a></li>
                     </ul>
                 </li>
-
-                <li><a href="cor.html" onclick="changeContent('Cor')">Cor</a>
+                <li class="dropdown">
+                    <a href="cor.html">Cor</a>
                     <ul class="submenu">
-                        <li><a href="#" onclick="changeContent('Tons de azul')">tons de azul</a></li>
-                        <li><a href="#" onclick="changeContent('Tons de rosa')">tons de rosa</a></li>
-                        <li><a href="#" onclick="changeContent('Tons de vermelho')">tons de vermelho</a></li>
-                        <li><a href="#" onclick="changeContent('Tons de jeans')">tons de jeans</a></li>
-                        <li><a href="#" onclick="changeContent('Tons de verde')">tons de verde</a></li>
+                        <li><a href="#">Azul</a></li>
+                        <li><a href="#">Rosa</a></li>
+                        <li><a href="#">Vermelho</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Verde</a></li>
                     </ul>
                 </li>
-
-                <li><a href="#" onclick="changeContent('Tamanho')">Tamanho</a>
+                <li class="dropdown">
+                    <a href="tamanho.html">Tamanho</a>
                     <ul class="submenu">
-                        <li><a href="#" onclick="changeContent('PP')">PP</a></li>
-                        <li><a href="#" onclick="changeContent('P')">P</a></li>
-                        <li><a href="#" onclick="changeContent('M')">M</a></li>
-                        <li><a href="#" onclick="changeContent('G')">G</a></li>
-                        <li><a href="#" onclick="changeContent('GG')">GG</a></li>
+                        <li><a href="#">PP</a></li>
+                        <li><a href="#">P</a></li>
+                        <li><a href="#">M</a></li>
+                        <li><a href="#">G</a></li>
+                        <li><a href="#">GG</a></li>
                     </ul>
                 </li>
-
-                <li><a href="#" onclick="changeContent('Acessório')">Acessório</a>
+                <li class="dropdown">
+                    <a href="acessorio.html">Acessórios</a>
                     <ul class="submenu">
-                        <li><a href="#" onclick="changeContent('Laços')">laços</a></li>
-                        <li><a href="#" onclick="changeContent('Pulseiras')">pulseiras</a></li>
-                        <li><a href="#" onclick="changeContent('Anéis')">aneis</a></li>
-                        <li><a href="#" onclick="changeContent('Colares')">colares</a></li>
-                        <li><a href="#" onclick="changeContent('Brincos')">brincos</a></li>
+                        <li><a href="#">Laços</a></li>
+                        <li><a href="#">Pulseiras</a></li>
+                        <li><a href="#">Anéis</a></li>
+                        <li><a href="#">Colares</a></li>
+                        <li><a href="#">Brincos</a></li>
                     </ul>
                 </li>
-
-                <li><a href="#" onclick="changeContent('Batom')">Batom</a>
+                <li class="dropdown">
+                    <a href="batom.html">Batom</a>
                     <ul class="submenu">
-                        <li><a href="#" onclick="changeContent('Tipo rosa')">tipo rosa</a></li>
-                        <li><a href="#" onclick="changeContent('Tipo nude')">tipo nude</a></li>
-                        <li><a href="#" onclick="changeContent('Tipo vermelho')">tipo vermelho</a></li>
-                        <li><a href="#" onclick="changeContent('Tipo preto')">tipo preto</a></li>
-                        <li><a href="#" onclick="changeContent('Tipo marrom')">tipo marrom</a></li>
+                        <li><a href="#">Rosa</a></li>
+                        <li><a href="#">Nude</a></li>
+                        <li><a href="#">Vermelho</a></li>
+                        <li><a href="#">Preto</a></li>
+                        <li><a href="#">Marrom</a></li>
                     </ul>
                 </li>
             </ul>
@@ -80,10 +78,13 @@
     </header>
 
     <section id="content">
-        <h1>Bem-vindo ao nosso site!</h1>
-        <p>Explore as diversas opções de roupas, acessórios e cosméticos disponíveis em nossa loja online.</p>
+        <h2>Bem-vindo à nossa loja!</h2>
+        <p>Explore nossa coleção exclusiva de roupas, acessórios e cosméticos.</p>
     </section>
 
+    <footer>
+        <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Medidas</title>
+    <link rel="stylesheet" href="tamanho.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1E90FF; 
+            color: rgb(0, 0, 0); 
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .table-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50; 
+            color: white; 
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #f9f9f9; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tabela de Medidas</h1>
+    </header>
+
+    <section class="table-container">
+        <h2>Encontre seu Tamanho Ideal</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tamanho</th>
+                    <th>Medidas (cm)</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PP</td>
+                    <td>Cintura: 60-64 | Quadril: 84-88</td>
+                    <td>Ajuste mais justo para medidas menores.</td>
+                </tr>
+                <tr>
+                    <td>P</td>
+                    <td>Cintura: 64-68 | Quadril: 88-92</td>
+                    <td>Confortável, adequado para medidas pequenas.</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>Cintura: 68-72 | Quadril: 92-96</td>
+                    <td>Ideal para a maioria dos corpos.</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>Cintura: 72-76 | Quadril: 96-100</td>
+                    <td>Ajuste solto e confortável.</td>
+                </tr>
+                <tr>
+                    <td>GG</td>
+                    <td>Cintura: 76-80 | Quadril: 100-104</td>
+                    <td>Visual moderno e confortável.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>
