@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="roupa.css">
+    <style>
+       
+        ul li ul {
+            display: none;
+        }
+
+        li:hover > ul {
+            display: block;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+
+                <li><a href="home.html" onclick>Home</a>
+
+                <li><a href="#" onclick="changeContent('Roupa')">Roupa</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tipos de vestidos')">tipos de vestidos</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de blusas')">tipos de blusas</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de calças')">tipos de calças</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de saias')">tipos de saias</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de shorts')">tipos de shorts</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="cor.html" onclick="changeContent('Cor')">Cor</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tons de azul')">tons de azul</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de rosa')">tons de rosa</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de vermelho')">tons de vermelho</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de jeans')">tons de jeans</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de verde')">tons de verde</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tamanho.html" onclick="changeContent('Tamanho')">Tamanho</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('PP')">PP</a></li>
+                        <li><a href="#" onclick="changeContent('P')">P</a></li>
+                        <li><a href="#" onclick="changeContent('M')">M</a></li>
+                        <li><a href="#" onclick="changeContent('G')">G</a></li>
+                        <li><a href="#" onclick="changeContent('GG')">GG</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="acessorio.html" onclick="changeContent('Acessório')">Acessório</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Laços')">laços</a></li>
+                        <li><a href="#" onclick="changeContent('Pulseiras')">pulseiras</a></li>
+                        <li><a href="#" onclick="changeContent('Anéis')">aneis</a></li>
+                        <li><a href="#" onclick="changeContent('Colares')">colares</a></li>
+                        <li><a href="#" onclick="changeContent('Brincos')">brincos</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="batom.html" onclick="changeContent('Batom')">Batom</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tipo rosa')">tipo rosa</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo nude')">tipo nude</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo vermelho')">tipo vermelho</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo preto')">tipo preto</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo marrom')">tipo marrom</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h1>Encontre o Acessório Perfeito para Você!</h1>
+        <p>Seja para um look mais delicado ou um visual ousado, nossos acessórios oferecem uma variedade de opções para todos os estilos e ocasiões. Descubra os acessórios que combinam com sua personalidade e arrase!</p>
+        
+        <h2>Acessórios Populares:</h2>
+        <ul>
+            <li><strong>Laços:</strong> Ideal para quem gosta de um toque delicado e feminino. Perfeito para complementar looks casuais ou até mesmo para dar um charme extra a eventos especiais.</li>
+            <li><strong>Pulseras:</strong> Acessórios versáteis, perfeitos para adicionar um toque de estilo ao seu visual. Desde modelos discretos até opções mais chamativas, as pulseiras combinam com todos os estilos e ocasiões.</li>
+            <li><strong>Anéis:</strong> Os anéis são acessórios sofisticados e cheios de personalidade. Perfeito para quem busca um toque de elegância, os anéis podem ser usados sozinhos ou combinados com outros itens para um visual marcante.</li>
+            <li><strong>Colares:</strong> Os colares são essenciais para completar qualquer look. Eles variam de modelos discretos a mais chamativos, podendo ser usados para dar destaque ao visual ou para adicionar um toque de sofisticação.</li>
+            <li><strong>Brincos:</strong> Os brincos são acessórios versáteis que podem ser usados em qualquer ocasião. De modelos clássicos a opções mais ousadas, eles podem transformar e complementar seu look, oferecendo um toque final perfeito.</li>
+        </ul>
+    
+        <p>Com nossos acessórios, você pode criar diferentes looks e destacar sua beleza de forma única. Não importa seu estilo, temos o acessório perfeito para você!</p>
+    
+        <h3>Dica de Estilo:</h3>
+        <p>Se você não tem certeza de qual acessório escolher, comece com opções mais neutras, como os <strong>Brincos</strong> discretos ou as <strong>Pulseras</strong> sutis para o dia a dia. Para eventos especiais ou quando quiser um visual ousado, aposte nos <strong>Anéis</strong> chamativos ou no <strong>Colar</strong> que complemente seu estilo.</p>
+    </section>
+
+
+</body>
+
+</html>

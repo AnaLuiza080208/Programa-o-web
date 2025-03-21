@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="roupa.css">
+    <style>
+       
+        ul li ul {
+            display: none;
+        }
+
+        li:hover > ul {
+            display: block;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+
+                <li><a href="home.html" onclick>Home</a>
+
+                <li><a href="#" onclick="changeContent('Roupa')">Roupa</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tipos de vestidos')">tipos de vestidos</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de blusas')">tipos de blusas</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de calças')">tipos de calças</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de saias')">tipos de saias</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de shorts')">tipos de shorts</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="cor.html" onclick="changeContent('Cor')">Cor</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tons de azul')">tons de azul</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de rosa')">tons de rosa</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de vermelho')">tons de vermelho</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de jeans')">tons de jeans</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de verde')">tons de verde</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tamanho.html" onclick="changeContent('Tamanho')">Tamanho</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('PP')">PP</a></li>
+                        <li><a href="#" onclick="changeContent('P')">P</a></li>
+                        <li><a href="#" onclick="changeContent('M')">M</a></li>
+                        <li><a href="#" onclick="changeContent('G')">G</a></li>
+                        <li><a href="#" onclick="changeContent('GG')">GG</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="acessorio.html" onclick="changeContent('Acessório')">Acessório</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Laços')">laços</a></li>
+                        <li><a href="#" onclick="changeContent('Pulseiras')">pulseiras</a></li>
+                        <li><a href="#" onclick="changeContent('Anéis')">aneis</a></li>
+                        <li><a href="#" onclick="changeContent('Colares')">colares</a></li>
+                        <li><a href="#" onclick="changeContent('Brincos')">brincos</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="batom.html" onclick="changeContent('Batom')">Batom</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tipo rosa')">tipo rosa</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo nude')">tipo nude</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo vermelho')">tipo vermelho</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo preto')">tipo preto</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo marrom')">tipo marrom</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h1>Encontre o Tamanho Perfeito para Você!</h1>
+        <p>Na nossa loja, oferecemos uma ampla gama de tamanhos para garantir que você encontre o ajuste ideal, seja para roupas casuais, formais ou acessórios. Acreditamos que o conforto e a confiança vêm do caimento perfeito.</p>
+        
+        <h2>Tamanhos Disponíveis:</h2>
+        <ul>
+            <li><strong>PP:</strong> Para quem busca um ajuste mais justo, ideal para corpos com medidas menores.</li>
+            <li><strong>P:</strong> Um tamanho que oferece um ajuste confortável, adequado para pessoas com medidas menores.</li>
+            <li><strong>M:</strong> O tamanho médio, ideal para a maioria dos corpos, garantindo conforto e estilo.</li>
+            <li><strong>G:</strong> Para quem procura um ajuste mais solto e confortável, ideal para quem tem um corpo maior.</li>
+            <li><strong>GG:</strong> Para garantir conforto e estilo em tamanhos maiores, oferecendo um visual perfeito e moderno.</li>
+        </ul>
+    
+        <p>Se você tem dúvidas sobre o tamanho ideal, consulte nossa <strong>tabela de medidas</strong> para encontrar o que mais combina com o seu corpo. Lembre-se: um bom ajuste é a chave para se sentir confortável e estiloso!</p>
+        
+        <h3>Dica:</h3>
+        <p>Se você ainda está em dúvida, não hesite em experimentar diferentes tamanhos! A roupa perfeita é aquela que faz você se sentir bem.</p>
+    </section>
+    
+
+</body>
+
+</html>

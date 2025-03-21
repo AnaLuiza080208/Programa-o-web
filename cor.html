@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="roupa.css">
+    <style>
+       
+        ul li ul {
+            display: none;
+        }
+
+        li:hover > ul {
+            display: block;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+
+                <li><a href="home.html" onclick>Home</a>
+
+                <li><a href="roupa.html" onclick="changeContent('Roupa')">Roupa</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tipos de vestidos')">tipos de vestidos</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de blusas')">tipos de blusas</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de calças')">tipos de calças</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de saias')">tipos de saias</a></li>
+                        <li><a href="#" onclick="changeContent('Tipos de shorts')">tipos de shorts</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="cor.html" onclick="changeContent('Cor')">Cor</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tons de azul')">tons de azul</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de rosa')">tons de rosa</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de vermelho')">tons de vermelho</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de jeans')">tons de jeans</a></li>
+                        <li><a href="#" onclick="changeContent('Tons de verde')">tons de verde</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tamanho.html" onclick="changeContent('Tamanho')">Tamanho</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('PP')">PP</a></li>
+                        <li><a href="#" onclick="changeContent('P')">P</a></li>
+                        <li><a href="#" onclick="changeContent('M')">M</a></li>
+                        <li><a href="#" onclick="changeContent('G')">G</a></li>
+                        <li><a href="#" onclick="changeContent('GG')">GG</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="acessorio.html" onclick="changeContent('Acessório')">Acessório</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Laços')">laços</a></li>
+                        <li><a href="#" onclick="changeContent('Pulseiras')">pulseiras</a></li>
+                        <li><a href="#" onclick="changeContent('Anéis')">aneis</a></li>
+                        <li><a href="#" onclick="changeContent('Colares')">colares</a></li>
+                        <li><a href="#" onclick="changeContent('Brincos')">brincos</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="batom.html" onclick="changeContent('Batom')">Batom</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="changeContent('Tipo rosa')">tipo rosa</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo nude')">tipo nude</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo vermelho')">tipo vermelho</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo preto')">tipo preto</a></li>
+                        <li><a href="#" onclick="changeContent('Tipo marrom')">tipo marrom</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h1>Explore as Cores Perfeitas para Você!</h1>
+        <p>Na nossa loja, acreditamos que as cores têm o poder de transformar qualquer look. Com uma variedade de tons, desde os mais clássicos até os mais vibrantes, temos a cor ideal para combinar com seu estilo e personalidade.</p>
+        
+        <h2>Cores Populares:</h2>
+        <ul>
+            <li><strong>Azul:</strong> Refresque seu visual com tons de azul, desde o claro até o marinho.</li>
+            <li><strong>Rosa:</strong> Adicione um toque de delicadeza e sofisticação com os variados tons de rosa.</li>
+            <li><strong>Vermelho:</strong> Para quem quer se destacar, o vermelho é sinônimo de paixão e ousadia.</li>
+            <li><strong>Preto:</strong> O clássico atemporal que nunca sai de moda. Ideal para qualquer ocasião.</li>
+            <li><strong>Branco:</strong> Perfeito para um visual fresco, limpo e sofisticado.</li>
+            <li><strong>Verde:</strong> Tons de verde trazem um ar natural e refrescante ao seu estilo.</li>
+        </ul>
+    
+        <p>Não importa o seu estilo, temos a cor perfeita esperando por você! Navegue pelas nossas categorias de roupas e acessórios e encontre os itens que refletem a sua personalidade.</p>
+    </section>
+    
+
+</body>
+
+</html>
