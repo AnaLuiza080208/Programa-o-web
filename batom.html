@@ -4,97 +4,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Loja</title>
+    <title>Batom - Minha Loja</title>
     <link rel="stylesheet" href="batom.css">
     <style>
-        ul li ul {
-            display: none;
+        .description {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin: 20px;
         }
 
-        li:hover > ul {
+        .description h1 {
+            color: #1C4E6E;
+            margin-bottom: 10px;
+        }
+
+        .description h2 {
+            color: #1C4E6E;
+            margin-bottom: 10px;
+        }
+
+        .description ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .description ul li {
+            margin-bottom: 10px;
+        }
+
+        .description p {
+            margin-bottom: 10px;
+        }
+
+        .cart {
+            position: relative;
+        }
+
+        .cart-items {
+            display: none;
+            position: absolute;
+            background-color: #B8D8D4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            right: 0;
+            z-index: 1;
+            border-radius: 4px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart:hover .cart-items {
             display: block;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .cart-item button {
+            background-color: #FF4D4D;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 2px 8px;
+            border-radius: 3px;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Minha Loja</h1>
+        <h1>Batom</h1>
         <nav>
             <ul class="menu">
                 <li><a href="home.html">Home</a></li>
                 <li class="dropdown">
                     <a href="roupa.html">Roupa</a>
                     <ul class="submenu">
-                        <li><a href="#">Vestidos</a></li>
-                        <li><a href="#">Blusas</a></li>
-                        <li><a href="#">Calças</a></li>
-                        <li><a href="#">Saias</a></li>
-                        <li><a href="#">Shorts</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="cor.html">Cor</a>
-                    <ul class="submenu">
-                        <li><a href="#">Azul</a></li>
-                        <li><a href="#">Rosa</a></li>
-                        <li><a href="#">Vermelho</a></li>
-                        <li><a href="#">Jeans</a></li>
-                        <li><a href="#">Verde</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="tamanho.html">Tamanho</a>
-                    <ul class="submenu">
-                        <li><a href="#">PP</a></li>
-                        <li><a href="#">P</a></li>
-                        <li><a href="#">M</a></li>
-                        <li><a href="#">G</a></li>
-                        <li><a href="#">GG</a></li>
+                        <li><a href="roupas/vestidos.html">Vestidos</a></li>
+                        <li><a href="roupas/blusas.html">Blusas</a></li>
+                        <li><a href="roupas/calcas.html">Calças</a></li>
+                        <li><a href="roupas/saias.html">Saias</a></li>
+                        <li><a href="roupas/shorts.html">Shorts</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="acessorio.html">Acessórios</a>
                     <ul class="submenu">
-                        <li><a href="#">Laços</a></li>
-                        <li><a href="#">Pulseiras</a></li>
-                        <li><a href="#">Anéis</a></li>
-                        <li><a href="#">Colares</a></li>
-                        <li><a href="#">Brincos</a></li>
+                        <li><a href="acessorios/lacos.html">Laços</a></li>
+                        <li><a href="acessorios/pulseiras.html">Pulseiras</a></li>
+                        <li><a href="acessorios/aneis.html">Anéis</a></li>
+                        <li><a href="acessorios/colares.html">Colares</a></li>
+                        <li><a href="acessorios/brincos.html">Brincos</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="batom.html">Batom</a>
                     <ul class="submenu">
-                        <li><a href="#">Rosa</a></li>
-                        <li><a href="#">Nude</a></li>
-                        <li><a href="#">Vermelho</a></li>
-                        <li><a href="#">Preto</a></li>
-                        <li><a href="#">Marrom</a></li>
+                        <li><a href="batom/rosa.html">Rosa</a></li>
+                        <li><a href="batom/nude.html">Nude</a></li>
+                        <li><a href="batom/vermelho.html">Vermelho</a></li>
+                        <li><a href="batom/preto.html">Preto</a></li>
+                        <li><a href="batom/marrom.html">Marrom</a></li>
                     </ul>
+                </li>
+                <li class="cart">
+                    <a href="#">Carrinho (<span id="cart-count">0</span>)</a>
+                    <div class="cart-items" id="cart-items"></div>
                 </li>
             </ul>
         </nav>
     </header>
 
     <section id="content">
-        <h1>Encontre a Cor de Batom Perfeita para Você!</h1>
-        <p>Seja para um look mais natural ou uma maquiagem ousada, nossos batons oferecem uma variedade de cores para todos os estilos e ocasiões. Descubra os tons que combinam com sua personalidade e arrase!</p>
+        <div class="description">
+            <h1>Encontre a Cor de Batom Perfeita para Você!</h1>
+            <p>Seja para um look mais natural ou uma maquiagem ousada, nossos batons oferecem uma variedade de cores para todos os estilos e ocasiões. Descubra os tons que combinam com sua personalidade e arrase!</p>
+            
+            <h2>Cores Populares:</h2>
+            <ul>
+                <li><strong>Rosa:</strong> Ideal para looks frescos e delicados. O tom perfeito para o dia a dia ou para um evento casual. Disponível em diferentes intensidades, do mais suave ao mais vibrante.</li>
+                <li><strong>Nude:</strong> A escolha clássica para uma maquiagem mais neutra e sofisticada. Perfeito para qualquer ocasião, proporcionando um visual natural e elegante.</li>
+                <li><strong>Vermelho:</strong> A cor da confiança e ousadia. Perfeito para noites especiais ou para um look poderoso e marcante. Uma tonalidade que nunca sai de moda!</li>
+                <li><strong>Preto:</strong> Para quem gosta de ousar e criar um visual mais intenso e misterioso. Ideal para festas e ocasiões mais descoladas, trazendo um toque de drama ao look.</li>
+                <li><strong>Marrom:</strong> Um tom quente e versátil, que combina com todos os estilos e é perfeito para looks mais elegantes e sofisticados. Ideal para quem busca um toque sutil, mas com personalidade.</li>
+            </ul>
         
-        <h2>Cores Populares:</h2>
-        <ul>
-            <li><strong>Rosa:</strong> Ideal para looks frescos e delicados. O tom perfeito para o dia a dia ou para um evento casual. Disponível em diferentes intensidades, do mais suave ao mais vibrante.</li>
-            <li><strong>Nude:</strong> A escolha clássica para uma maquiagem mais neutra e sofisticada. Perfeito para qualquer ocasião, proporcionando um visual natural e elegante.</li>
-            <li><strong>Vermelho:</strong> A cor da confiança e ousadia. Perfeito para noites especiais ou para um look poderoso e marcante. Uma tonalidade que nunca sai de moda!</li>
-            <li><strong>Preto:</strong> Para quem gosta de ousar e criar um visual mais intenso e misterioso. Ideal para festas e ocasiões mais descoladas, trazendo um toque de drama ao look.</li>
-            <li><strong>Marrom:</strong> Um tom quente e versátil, que combina com todos os estilos e é perfeito para looks mais elegantes e sofisticados. Ideal para quem busca um toque sutil, mas com personalidade.</li>
-        </ul>
-    
-        <p>Com nossas opções de batons, você pode criar diferentes looks e destacar sua beleza de forma única. Não importa o seu estilo, temos o tom perfeito para você!</p>
-    
-        <h3>Dica de Estilo:</h3>
-        <p>Se você não tem certeza de qual cor escolher, experimente os tons mais neutros para o dia a dia (como o <strong>Nude</strong>) e reserve as cores mais ousadas, como o <strong>Vermelho</strong> ou o <strong>Preto</strong>, para ocasiões especiais ou à noite.</p>
+            <p>Com nossas opções de batons, você pode criar diferentes looks e destacar sua beleza de forma única. Não importa o seu estilo, temos o tom perfeito para você!</p>
+        
+            <h3>Dica de Estilo:</h3>
+            <p>Se você não tem certeza de qual cor escolher, experimente os tons mais neutros para o dia a dia (como o <strong>Nude</strong>) e reserve as cores mais ousadas, como o <strong>Vermelho</strong> ou o <strong>Preto</strong>, para ocasiões especiais ou à noite.</p>
+        </div>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartCount = cart.length;
+
+        updateCart();
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            cartCount++;
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            cartCount--;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartCountElement = document.getElementById('cart-count');
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
+                    <button onclick="removeFromCart(${index})">X</button>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            cartCountElement.textContent = cartCount;
+        }
+    </script>
 </body>
 
 </html>

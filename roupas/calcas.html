@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calças - Minha Loja</title>
+    <link rel="stylesheet" href="../home.css">
+    <style>
+        /* Estilos específicos para a página de produtos */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-size: 1.25rem;
+            color: #1C4E6E;
+            margin: 15px 10px 10px;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
+            color: #333;
+            margin: 0 10px 15px;
+        }
+
+        .add-to-cart-btn {
+            display: block;
+            width: calc(100% - 20px);
+            margin: 0 10px 10px;
+            padding: 10px;
+            background-color: #7DBE9C;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #56A1A5;
+        }
+
+        /* Estilos do carrinho */
+        .cart {
+            position: relative;
+        }
+
+        .cart-items {
+            display: none;
+            position: absolute;
+            background-color: #B8D8D4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            right: 0;
+            z-index: 1;
+            border-radius: 4px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart:hover .cart-items {
+            display: block;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .cart-item button {
+            background-color: #FF4D4D;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 2px 8px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Calças</h1>
+        <!-- Menu completo -->
+        <nav>
+            <ul class="menu">
+                <li><a href="../home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Roupa</a>
+                    <ul class="submenu">
+                        <li><a href="vestidos.html">Vestidos</a></li>
+                        <li><a href="blusas.html">Blusas</a></li>
+                        <li><a href="calcas.html">Calças</a></li>
+                        <li><a href="saias.html">Saias</a></li>
+                        <li><a href="shorts.html">Shorts</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Acessórios</a>
+                    <ul class="submenu">
+                        <li><a href="../acessorios/lacos.html">Laços</a></li>
+                        <li><a href="../acessorios/pulseiras.html">Pulseiras</a></li>
+                        <li><a href="../acessorios/aneis.html">Anéis</a></li>
+                        <li><a href="../acessorios/colares.html">Colares</a></li>
+                        <li><a href="../acessorios/brincos.html">Brincos</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Batom</a>
+                    <ul class="submenu">
+                        <li><a href="../batom/rosa.html">Rosa</a></li>
+                        <li><a href="../batom/nude.html">Nude</a></li>
+                        <li><a href="../batom/vermelho.html">Vermelho</a></li>
+                        <li><a href="../batom/preto.html">Preto</a></li>
+                        <li><a href="../batom/marrom.html">Marrom</a></li>
+                    </ul>
+                </li>
+                <li class="cart">
+                    <a href="#">Carrinho (<span id="cart-count">0</span>)</a>
+                    <div class="cart-items" id="cart-items">
+                        <!-- Itens do carrinho serão adicionados aqui -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content">
+        <h2>Nossas Calças</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="calca-jeans.jpg" alt="Calça Jeans Skinny">
+                <h3>Calça Jeans Skinny</h3>
+                <p>R$ 129,90</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Calça Jeans Skinny', 129.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="calca-alfaiataria.jpg" alt="Calça Alfaiataria Preta">
+                <h3>Calça Alfaiataria Preta</h3>
+                <p>R$ 159,90</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Calça Alfaiataria Preta', 159.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="calca-jogger.jpg" alt="Calça Jogger Cinza">
+                <h3>Calça Jogger Cinza</h3>
+                <p>R$ 139,90</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Calça Jogger Cinza', 139.90)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartCount = cart.length;
+
+        updateCart();
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            cartCount++;
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            cartCount--;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartCountElement = document.getElementById('cart-count');
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
+                    <button onclick="removeFromCart(${index})">X</button>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            cartCountElement.textContent = cartCount;
+        }
+    </script>
+</body>
+
+</html>

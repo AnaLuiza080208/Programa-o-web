@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batom Marrom - Minha Loja</title>
+    <link rel="stylesheet" href="../home.css" />
+    <style>
+      
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .product-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .product-card h3 {
+        font-size: 1.25rem;
+        color: #1c4e6e;
+        margin: 15px 10px 10px;
+      }
+
+      .product-card p {
+        font-size: 0.9rem;
+        color: #333;
+        margin: 0 10px 15px;
+      }
+
+      .add-to-cart-btn {
+        display: block;
+        width: calc(100% - 20px);
+        margin: 0 10px 10px;
+        padding: 10px;
+        background-color: #7dbe9c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+
+      .add-to-cart-btn:hover {
+        background-color: #56a1a5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Batom Nude</h1>
+    
+      <nav>
+        <ul class="menu">
+          <li><a href="../home.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Roupa</a>
+            <ul class="submenu">
+              <li><a href="../roupas/vestidos.html">Vestidos</a></li>
+              <li><a href="../roupas/blusas.html">Blusas</a></li>
+              <li><a href="../roupas/calcas.html">Calças</a></li>
+              <li><a href="../roupas/saias.html">Saias</a></li>
+              <li><a href="../roupas/shorts.html">Shorts</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Acessórios</a>
+            <ul class="submenu">
+              <li><a href="../acessorios/lacos.html">Laços</a></li>
+              <li><a href="../acessorios/pulseiras.html">Pulseiras</a></li>
+              <li><a href="../acessorios/aneis.html">Anéis</a></li>
+              <li><a href="../acessorios/colares.html">Colares</a></li>
+              <li><a href="../acessorios/brincos.html">Brincos</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Batom</a>
+            <ul class="submenu">
+              <li><a href="rosa.html">Rosa</a></li>
+              <li><a href="nude.html">Nude</a></li>
+              <li><a href="vermelho.html">Vermelho</a></li>
+              <li><a href="preto.html">Preto</a></li>
+              <li><a href="marrom.html">Marrom</a></li>
+            </ul>
+          </li>
+          <li class="cart">
+            <a href="#">Carrinho (<span id="cart-count">0</span>)</a>
+            <div class="cart-items" id="cart-items">
+          
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  
+    <section id="content">
+      <h2>Nossos Batons Marrom</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="batom-marrom1.jpg" alt="Batom Marrom Clássico" />
+          <h3>Batom Marrom Clássico</h3>
+          <p>R$ 39,90</p>
+          <button
+            class="add-to-cart-btn"
+            onclick="addToCart('Batom Marrom Clássico', 39.90)"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="batom-marrom2.jpg" alt="Batom Marrom Chocolate" />
+          <h3>Batom Marrom Chocolate</h3>
+          <p>R$ 49,90</p>
+          <button
+            class="add-to-cart-btn"
+            onclick="addToCart('Batom Marrom Chocolate', 49.90)"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+        <div class="product-card">
+          <img src="batom-marrom3.jpg" alt="Batom Marrom Matte" />
+          <h3>Batom Marrom Matte</h3>
+          <p>R$ 59,90</p>
+          <button
+            class="add-to-cart-btn"
+            onclick="addToCart('Batom Marrom Matte', 59.90)"
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let cartCount = cart.length;
+
+      updateCart();
+
+      function addToCart(productName, price) {
+        cart.push({ name: productName, price: price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        cartCount++;
+        updateCart();
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        cartCount--;
+        updateCart();
+      }
+
+      function updateCart() {
+        const cartItems = document.getElementById("cart-items");
+        const cartCountElement = document.getElementById("cart-count");
+        cartItems.innerHTML = "";
+        cart.forEach((item, index) => {
+          const cartItem = document.createElement("div");
+          cartItem.className = "cart-item";
+          cartItem.innerHTML = `
+                    <span>${item.name} - R$ ${item.price.toFixed(2)}</span>
+                    <button onclick="removeFromCart(${index})">X</button>
+                `;
+          cartItems.appendChild(cartItem);
+        });
+        cartCountElement.textContent = cartCount;
+      }
+    </script>
+  </body>
+</html>
