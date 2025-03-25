@@ -7,7 +7,7 @@
     <title>Vestidos - Minha Loja</title>
     <link rel="stylesheet" href="../home.css">
     <style>
-        /* Estilos específicos para a página de produtos */
+      
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -64,7 +64,6 @@
             background-color: #56A1A5;
         }
 
-        /* Estilos do carrinho */
         .cart {
             position: relative;
         }
@@ -107,7 +106,7 @@
 <body>
     <header>
         <h1>Vestidos</h1>
-        <!-- Menu completo -->
+      
         <nav>
             <ul class="menu">
                 <li><a href="../home.html">Home</a></li>
@@ -144,7 +143,7 @@
                 <li class="cart">
                     <a href="#">Carrinho (<span id="cart-count">0</span>)</a>
                     <div class="cart-items" id="cart-items">
-                        <!-- Itens do carrinho serão adicionados aqui -->
+                   
                     </div>
                 </li>
             </ul>
@@ -155,19 +154,19 @@
         <h2>Nossos Vestidos</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="vestido-floral.jpg" alt="Vestido Longo Floral">
+                <img src="imagem/vestidoFloral.jpg" alt="Vestido Longo Floral">
                 <h3>Vestido Longo Floral</h3>
                 <p>R$ 199,90</p>
                 <button class="add-to-cart-btn" onclick="addToCart('Vestido Longo Floral', 199.90)">Adicionar ao Carrinho</button>
             </div>
             <div class="product-card">
-                <img src="vestido-jeans.jpg" alt="Vestido Curto Jeans">
+                <img src="imagem/vestidoJeans.jpg" alt="Vestido Curto Jeans">
                 <h3>Vestido Curto Jeans</h3>
                 <p>R$ 149,90</p>
                 <button class="add-to-cart-btn" onclick="addToCart('Vestido Curto Jeans', 149.90)">Adicionar ao Carrinho</button>
             </div>
             <div class="product-card">
-                <img src="vestido-vermelho.jpg" alt="Vestido Festa Vermelho">
+                <img src="imagem/vestidoVermelho.jpg" alt="Vestido Festa Vermelho">
                 <h3>Vestido Festa Vermelho</h3>
                 <p>R$ 249,90</p>
                 <button class="add-to-cart-btn" onclick="addToCart('Vestido Festa Vermelho', 249.90)">Adicionar ao Carrinho</button>
@@ -183,7 +182,6 @@
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let cartCount = cart.length;
 
-        // Atualiza o carrinho ao carregar a página
         updateCart();
 
         function addToCart(productName, price) {
