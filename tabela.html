@@ -5,53 +5,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de Medidas</title>
-    <link rel="stylesheet" href="tamanho.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #E6A4B4;
+            --secondary: #D67C8E;
+            --accent: #F8C1D5;
+            --light-bg: #FFF0F5;
+            --text-dark: #5A2A37;
+            --text-light: #FFF9FB;
+            --dark-accent: #B0576D;
+            --font-main: 'Montserrat', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+            --space-xs: 10px;
+            --space-sm: 15px;
+            --space-md: 20px;
+            --space-lg: 30px;
+            --shadow-sm: 0 4px 8px rgba(214, 124, 142, 0.3);
+            --shadow-md: 0 6px 15px rgba(230, 164, 180, 0.15);
+            --radius-sm: 5px;
+            --radius-md: 10px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--font-main);
             margin: 0;
             padding: 0;
-            background-color: #1E90FF; 
-            color: rgb(0, 0, 0); 
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
+
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
+            background-color: var(--secondary);
+            color: var(--text-light);
+            padding: var(--space-md) 0;
             text-align: center;
+            box-shadow: var(--shadow-sm);
         }
-        h1 {
+
+        h1, h2 {
+            font-family: var(--font-heading);
             margin: 0;
         }
-        .table-container {
-            padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white; 
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        h1 {
+            font-size: 2.2rem;
         }
+
+        h2 {
+            color: var(--dark-accent);
+            margin: var(--space-sm) 0 var(--space-lg);
+            font-size: 1.8rem;
+        }
+
+        .table-container {
+            padding: var(--space-lg);
+            max-width: 800px;
+            margin: var(--space-lg) auto;
+            background-color: var(--text-light);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: var(--space-md);
         }
+
         table, th, td {
-            border: 1px solid #ddd;
+            border: 1px solid var(--accent);
         }
+
         th, td {
-            padding: 10px;
+            padding: var(--space-sm);
             text-align: center;
         }
+
         th {
-            background-color: #4CAF50; 
-            color: white; 
+            background-color: var(--primary);
+            color: var(--text-light);
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
+
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: var(--light-bg);
         }
+
         tr:nth-child(odd) {
-            background-color: #f9f9f9; 
+            background-color: var(--text-light);
+        }
+
+        tr:hover {
+            background-color: var(--accent);
+            transition: background-color 0.3s ease;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        /* Estilo para listas com corações */
+        .info-list {
+            margin: var(--space-md) 0;
+            padding: 0 var(--space-md);
+            text-align: left;
+        }
+
+        .info-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: var(--space-lg);
+            margin-bottom: var(--space-xs);
+        }
+
+        .info-list li::before {
+            content: "♥";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .table-container {
+                padding: var(--space-md);
+                margin: var(--space-md);
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -64,6 +159,15 @@
 
     <section class="table-container">
         <h2>Encontre seu Tamanho Ideal</h2>
+        
+        <div class="info-list">
+            <ul>
+                <li>Medidas aproximadas em centímetros</li>
+                <li>Consulte nossa equipe para orientações personalizadas</li>
+                <li>Tolerância de 2cm em todas as medidas</li>
+            </ul>
+        </div>
+        
         <table>
             <thead>
                 <tr>
@@ -76,32 +180,31 @@
                 <tr>
                     <td>PP</td>
                     <td>Cintura: 60-64 | Quadril: 84-88</td>
-                    <td>Ajuste mais justo para medidas menores.</td>
+                    <td>Ajuste mais justo para medidas menores</td>
                 </tr>
                 <tr>
                     <td>P</td>
                     <td>Cintura: 64-68 | Quadril: 88-92</td>
-                    <td>Confortável, adequado para medidas pequenas.</td>
+                    <td>Confortável, adequado para medidas pequenas</td>
                 </tr>
                 <tr>
                     <td>M</td>
                     <td>Cintura: 68-72 | Quadril: 92-96</td>
-                    <td>Ideal para a maioria dos corpos.</td>
+                    <td>Ideal para a maioria dos corpos</td>
                 </tr>
                 <tr>
                     <td>G</td>
                     <td>Cintura: 72-76 | Quadril: 96-100</td>
-                    <td>Ajuste solto e confortável.</td>
+                    <td>Ajuste solto e confortável</td>
                 </tr>
                 <tr>
                     <td>GG</td>
                     <td>Cintura: 76-80 | Quadril: 100-104</td>
-                    <td>Visual moderno e confortável.</td>
+                    <td>Visual moderno e confortável</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
 </body>
-
 </html>

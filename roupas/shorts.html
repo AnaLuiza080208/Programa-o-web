@@ -7,7 +7,7 @@
     <title>Shorts - Minha Loja</title>
     <link rel="stylesheet" href="../home.css">
     <style>
-        /* Estilos específicos para a página de produtos */
+     
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -64,7 +64,6 @@
             background-color: #56A1A5;
         }
 
-        /* Estilos do carrinho */
         .cart {
             position: relative;
         }
@@ -107,7 +106,7 @@
 <body>
     <header>
         <h1>Shorts</h1>
-        <!-- Menu completo -->
+   
         <nav>
             <ul class="menu">
                 <li><a href="../home.html">Home</a></li>
@@ -144,7 +143,7 @@
                 <li class="cart">
                     <a href="#">Carrinho (<span id="cart-count">0</span>)</a>
                     <div class="cart-items" id="cart-items">
-                        <!-- Itens do carrinho serão adicionados aqui -->
+        
                     </div>
                 </li>
             </ul>
@@ -183,7 +182,6 @@
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let cartCount = cart.length;
 
-        // Atualiza o carrinho ao carregar a página
         updateCart();
 
         function addToCart(productName, price) {

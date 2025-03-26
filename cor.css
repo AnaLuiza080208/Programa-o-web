@@ -1,18 +1,35 @@
+:root {
+    --primary: #E6A4B4; 
+    --secondary: #D67C8E;
+    --accent: #F8C1D5;
+    --light-bg: #FFF0F5;
+    --text-dark: #5A2A37;
+    --text-light: #FFF9FB;
+    --dark-accent: #B0576D;
+    --font-main: Arial, Helvetica, sans-serif;
+    --shadow-sm: 0 4px 8px rgba(214, 124, 142, 0.2);
+    --shadow-md: 0 6px 12px rgba(230, 164, 180, 0.3);
+    --shadow-lg: 0 8px 16px rgba(214, 124, 142, 0.3);
+    --radius-sm: 5px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-main);
     margin: 0;
     padding: 0;
-    background-color: #3A7CA5;
-    color: rgb(0, 0, 0);
+    background-color: var(--light-bg);
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
 header {
     position: sticky;
     top: 0;
-    background-color: #1C4E6E;
+    background-color: var(--secondary);
     z-index: 100;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-sm);
 }
 
 nav {
@@ -26,8 +43,8 @@ nav {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #1C4E6E;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary);
+    box-shadow: 0 4px 6px rgba(214, 124, 142, 0.1);
 }
 
 .menu li {
@@ -38,27 +55,27 @@ nav {
 .menu li a {
     display: block;
     padding: 15px 25px;
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .menu li a:hover {
-    background-color: #56A1A5;
+    background-color: var(--primary);
     transform: scale(1.1);
 }
 
 .submenu {
     display: none;
     position: absolute;
-    background-color: #B8D8D4;
+    background-color: var(--light-bg);
     list-style-type: none;
     padding: 0;
     margin: 0;
-    border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
 }
 
 .menu li:hover .submenu {
@@ -67,32 +84,38 @@ nav {
 
 .submenu li a {
     padding: 12px 20px;
-    color: #333;
+    color: var(--text-dark);
     text-decoration: none;
     font-size: 14px;
     transition: background-color 0.3s ease;
 }
 
 .submenu li a:hover {
-    background-color: #7DBE9C;
+    background-color: var(--accent);
 }
 
 img {
     max-width: 100%;
     display: block;
     margin: 20px auto;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--accent);
 }
 
 #content {
     padding: 20px;
     text-align: center;
+    background-color: white;
+    border-radius: var(--radius-md);
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: var(--shadow-sm);
 }
 
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .color-grid {
@@ -103,55 +126,58 @@ h1 {
 }
 
 .color-card {
-    background-color: #1C4E6E;
-    border-radius: 8px;
+    background-color: white;
+    border-radius: var(--radius-md);
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent);
 }
 
 .color-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--light-bg);
 }
 
 .color-card img {
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     margin-bottom: 15px;
 }
 
 .color-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #4bbcc4;
+    color: var(--dark-accent);
 }
 
 .color-card p {
     font-size: 16px;
-    color: #B8D8D4;
+    color: var(--text-dark);
 }
 
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #56A1A5;
-    color: white;
+    background-color: var(--primary);
+    color: var(--text-light);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
-    background-color: #7DBE9C;
+    background-color: var(--secondary);
     transform: scale(1.05);
 }
 
 footer {
-    background-color: #1C4E6E;
-    color: white;
+    background-color: var(--secondary);
+    color: var(--text-light);
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-sm);
 }
